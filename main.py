@@ -24,20 +24,20 @@ def main():
     print("")  # line break
     ### write code to complete this function BELOW here ###
 
-    die1 = roll_die()
-    die2 = roll_die()
-    question = get_question_type()
-    print_question(die1, die2, question)
+    die1 = app_functions.roll_die()
+    die2 = app_functions.roll_die()
+    question = app_functions.get_question_type()
+    app_functions.print_question(die1, die2, question)
 
-    answer = input_answer()
+    answer = app_functions.input_answer()
     if answer == -1:
-        print_error_message()
+        app_functions.print_error_message()
         return
     
-    if is_correct_answer(die1, die2, question, answer):
-        print_congratulations(question)
+    if app_functions.is_correct_answer(die1, die2, question, answer):
+        app_functions.print_congratulations(question)
     else:
-        print_correct_answer(die1, die2, question)
+        app_functions.print_correct_answer(die1, die2, question)
         
     ### write code to complete this function ABOVE here ###
     print("")  # line break

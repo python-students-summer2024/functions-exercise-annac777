@@ -24,6 +24,21 @@ def main():
     print("")  # line break
     ### write code to complete this function BELOW here ###
 
+    die1 = roll_die()
+    die2 = roll_die()
+    question = get_question_type()
+    print_question(die1, die2, question)
+
+    answer = input_answer()
+    if answer == -1:
+        print_error_message()
+        return
+    
+    if is_correct_answer(die1, die2, question, answer):
+        print_congratulations(question)
+    else:
+        print_correct_answer(die1, die2, question)
+        
     ### write code to complete this function ABOVE here ###
     print("")  # line break
     print("Game over!!!")
